@@ -1,9 +1,8 @@
 import React from "react";
+import { StartPage } from "./StartPage/StartPage";
 
 export const App = () => {
 	return (
-		<div>
-			<h1>Hello World</h1>
-		</div>
+		<StartPage/>
 	);
 };
