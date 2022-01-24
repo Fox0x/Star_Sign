@@ -10,14 +10,14 @@ module.exports = {
 		path: path.resolve(__dirname, "dist"), // output path
 	},
 	resolve: {
-		extensions: [".js", ".json", ".jsx", "..."],
+		extensions: [".jsx", "..."],
 	},
 	devServer: {
 		port: 3000,
 	},
-	plugins: [ 
-		new HtmlWebpackPlugin({ 
-			template: "./src/index.html", 
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: "./src/index.html",
 		}),
 		new CleanWebpackPlugin(), // clean dist folder
 	],
@@ -28,11 +28,11 @@ module.exports = {
 				use: ["style-loader", "css-loader"],
 			},
 			{
-				test: /\.(png|svg|jpg|gif)$/, // image loader
-				use: ["file-loader"],
+				test: /\.(png|svg|jpg|jpeg|gif)$/i,
+				type: "asset/images",
 			},
 			{
-				test: /\.m?js$/, 
+				test: /\.m?js$/,
 				exclude: /node_modules/,
 				use: {
 					loader: "babel-loader",
