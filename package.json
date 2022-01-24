@@ -1,7 +1,11 @@
 {
   "name": "star_sign",
   "version": "1.0.0",
-  "description": "",
+  "description": "Star sign calculator",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/Fox0x/Star_Sign"
+  },
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
